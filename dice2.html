@@ -1,0 +1,49 @@
+<!doctype html>
+
+<html>
+	<head>
+	<title> Die Rolls </title>
+	<script type="text/javascript">
+	</script>
+	<script type="text/javascript">
+	
+	function rollDie()
+	{
+		return Math.floor(Math.random()*6)+1;
+	}
+	function RollDice()
+	{
+	var roll1, roll2;
+	
+	roll1 = rollDie();
+	roll2 = rollDie();
+			console.log('test ',roll1,' ',roll2);
+
+	document.getElementById('die1Img').src=
+		'http://balance3e.com/Images/die' + roll1 + '.gif';
+	document.getElementById('die2Img').src=
+		'http://balance3e.com/Images/die' + roll2 + '.gif';
+		document.getElementById('rollspan').innerHTML = 
+			parseFloat(document.getElementById('rollspan').innerHTML + 1);
+	}
+</script>
+</head>
+
+<body>
+	<div style="text-align:center">
+	<p>
+	<img id="die1Img" alt="die image"
+		src="http://balance3e.com/Images/die1.gif">
+	<img id="die2Img" alt="die image"
+		src="http://balance3e.com/Images/die1.gif">
+	</p>
+	<input type="button" value="Click to ROll" onclick="RollDice();">
+	<hr>
+	<p>
+		Number of rolls: <span id="rollspan">0</span>
+		</p>
+		</div>
+		</body>
+		</html>
+	
+	

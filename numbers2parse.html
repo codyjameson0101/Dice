@@ -1,0 +1,49 @@
+<!doctype html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Numbers vs.Strings of digits</title>
+		<link rel="stylesheet" href="../css/pic1.css">
+	</head>
+	
+	<body>
+		<div id="output">
+		</div>
+		
+		<div id="inputArea">
+			your age, in years: <br>
+			<input id="ageBox" type="text" size=12 value=0>
+			<br><br>
+			Your favorite 3 digit number: <br>
+			<input id="favorite" type="text" size=12 value=0>
+			<br><br>
+			<!-- Use the age and favorite number you typed in only after user clicks this button -->
+			<input id="Button1" type="button"
+				value="Click to compute sum of age and favorite 3 digit number"
+				onclick="   
+					var age = 0;
+					var favorite = 0;
+					
+					var ageString = document.getElementById('ageBox').value;
+					age = parseFloat(ageString);
+					console.log('Age: ' + ageString + ' ' + age);
+					favoriteString = document.getElementById('favorite').value;
+					favorite = parseInt(favoriteString);
+					console.log('Favorite: ' + favoriteString + ' ' + favorite);
+					
+					var sum = age + favorite;
+					
+					
+					
+					message= '<h1>The sum of ' + age + ' and ' + favorite + ' is ' + sum + '</h1>' +
+							 '<h4>Go Ducks!</h4>';
+					console.log('Message: ' + message);  
+					var output = document.getElementById('output');
+					output.innerHTML = message;
+			">
+		</div>
+	</body>
+</html>
+
+

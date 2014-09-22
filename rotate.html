@@ -1,0 +1,45 @@
+<doctype html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>Rotation Mutation</title>
+</head>
+<body>
+	<h1>Click button demo</h1>
+	<h3>by Cody Jameson</h3>
+	<p>Rotate the list of images-just for fun</P>
+	<img id="image1" src="../images/image1.jpg" alt="first image" width=150>
+	<img id="image2" src="../images/image2.jpg" alt="second image" width=150>
+	<img id="image3" src="../images/image3.jpg" alt="third image" width=150>
+	<img id="image4" src="../images/image4.jpg" alt="fourth image" width=150>
+	<br><br>
+	<!-- When button clicked, rotate images -->
+	<input type="button"
+		value="click to rotate list of images"
+		onclick="
+			// img1 will point to <img id='image1'> html element.
+			var img1 = document.getElementById('image1');
+			var img2 = document.getElementById('image2');
+			var img3 = document.getElementById('image3');
+			var img4 = document.getElementById('image4');
+			
+			// save imag1's src, alt values
+			var topsrc = img4.src;
+			var topalt = img4.alt;
+			
+			//begin rotating -- img1 <-- img2 attributes, etc.
+			img4.src = img3.src
+			img4.alt = img3.alt;
+			img3.src = img2.src
+			img3.alt = img2.alt;
+			img2.src = img1.src
+			img2.alt = img1.alt;
+			
+			
+			img1.src = topsrc;
+			img1.alt = topalt;
+			
+			">
+		</body>
+	</html>
